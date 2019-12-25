@@ -24,12 +24,5 @@ python3 MssqlSeckill.py -i 10.22.112.114 -p 1433 -u sa -P test -d msdb -m(模式
 
 ![](img/1577254064818.jpg)
 
-![](img/QQ20191225-142200-HD.gif)
-
-一键开启xp_cmdshell
-
-![](img/QQ20191225-142200-HD.gif)
-
-xp_Cmdshell交互式模式。
 
 
